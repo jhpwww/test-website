@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的第一個網站</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #5d6978;
+      --line: #dce3ea;
+      --paper: #f7fafc;
+      --accent: #0f766e;
+      --accent-strong: #115e59;
+      --sun: #f2b84b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      place-items: center;
+      padding: 48px 20px 32px;
+      background:
+        linear-gradient(135deg, rgba(15, 118, 110, 0.9), rgba(24, 33, 47, 0.86)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: white;
+    }
+
+    .hero-inner { width: min(980px, 100%); }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 96px;
+      font-size: 15px;
+    }
+
+    .brand { font-weight: 700; letter-spacing: 0; }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .nav-links a { opacity: 0.9; }
+
+    h1 {
+      max-width: 780px;
+      margin: 0 0 18px;
+      font-size: clamp(40px, 7vw, 74px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 640px;
+      margin: 0 0 30px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 19px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+    }
+
+    .button.primary {
+      background: var(--sun);
+      color: #172033;
+      border-color: var(--sun);
+    }
+
+    main {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 150px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card p,
+    section p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .contact .button {
+      color: white;
+      background: var(--accent);
+      border-color: var(--accent-strong);
+    }
+
+    footer {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 26px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 64px;
+      }
+
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <nav aria-label="主要導覽">
+        <a class="brand" href="#">我的網站</a>
+        <div class="nav-links">
+          <a href="#about">關於</a>
+          <a href="#work">內容</a>
+          <a href="#contact">聯絡</a>
+        </div>
+      </nav>
+
+      <h1>你好，這是我的第一個 GitHub 網頁。</h1>
+      <p class="lead">這是一個簡單、清楚、可以直接放上 GitHub Pages 的網站範本。你可以把它改成個人介紹、作品集、活動頁或小型產品頁。</p>
+      <div class="actions">
+        <a class="button primary" href="#work">看看內容</a>
+        <a class="button" href="#contact">聯絡我</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>關於這個網站</h2>
+      <p>這個頁面只需要一個 index.html 檔案，不需要安裝任何工具。把它放到 GitHub repository 後，開啟 GitHub Pages 就能公開瀏覽。</p>
+    </section>
+
+    <section id="work">
+      <h2>可以放什麼</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>個人介紹</h3>
+          <p>放你的名字、專長、經歷和社群連結。</p>
+        </article>
+        <article class="card">
+          <h3>作品展示</h3>
+          <p>整理專案、圖片、影片或你想公開分享的成果。</p>
+        </article>
+        <article class="card">
+          <h3>活動資訊</h3>
+          <p>寫下時間、地點、報名方式和重要公告。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2>聯絡</h2>
+        <p>把下面的 email 改成你的信箱，就可以開始使用。</p>
+      </div>
+      <a class="button" href="mailto:hello@example.com">hello@example.com</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 我的網站
+  </footer>
+</body>
+</html>
