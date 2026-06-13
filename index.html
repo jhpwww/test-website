@@ -141,6 +141,13 @@
       margin: 0;
     }
 
+    .card a {
+      display: inline-flex;
+      margin-top: 12px;
+      color: var(--accent-strong);
+      font-weight: 700;
+    }
+
     .contact {
       display: flex;
       justify-content: space-between;
@@ -182,14 +189,16 @@
         <div class="nav-links">
           <a href="#about">關於</a>
           <a href="#work">內容</a>
+          <a href="projectile/">斜拋模擬器</a>
           <a href="#contact">聯絡</a>
         </div>
       </nav>
 
       <h1>你好，這是我的第一個 GitHub 網頁。</h1>
-      <p class="lead">這是一個簡單、清楚、可以直接放上 GitHub Pages 的網站範本。你可以把它改成個人介紹、作品集、活動頁或小型產品頁。</p>
+      <p class="lead">這是一個簡單、清楚、可以直接放上 GitHub Pages 的網站範本。現在也加入了可互動調整參數的斜拋運動模擬器。</p>
       <div class="actions">
-        <a class="button primary" href="#work">看看內容</a>
+        <a class="button primary" href="projectile/">開啟斜拋模擬器</a>
+        <a class="button" href="#work">看看內容</a>
         <a class="button" href="#contact">聯絡我</a>
       </div>
     </div>
@@ -205,16 +214,17 @@
       <h2>可以放什麼</h2>
       <div class="grid">
         <article class="card">
+          <h3>斜拋運動模擬器</h3>
+          <p>調整初速度、角度、高度、重力、質量與阻力係數，觀察質點拋物線軌跡。</p>
+          <a href="projectile/">前往模擬器</a>
+        </article>
+        <article class="card">
           <h3>個人介紹</h3>
           <p>放你的名字、專長、經歷和社群連結。</p>
         </article>
         <article class="card">
           <h3>作品展示</h3>
           <p>整理專案、圖片、影片或你想公開分享的成果。</p>
-        </article>
-        <article class="card">
-          <h3>活動資訊</h3>
-          <p>寫下時間、地點、報名方式和重要公告。</p>
         </article>
       </div>
     </section>
